@@ -1,5 +1,5 @@
 words=[]
-output=[]
 words=input().split()
-for word in words[::-1]:
-    print(word,end=' ')
+len1=len(words)
+for i in range(len(words)):
+    print(words[len1-i-1],end=' ')

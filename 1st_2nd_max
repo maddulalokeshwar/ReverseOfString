@@ -1,0 +1,30 @@
+def max1(l1):
+    temp=l1[0]
+    for i in l1:
+        if i>temp:
+            temp=i
+    return temp
+def max2(l1,mx1):
+    temp=l1[0]
+    if len(l1) ==1:
+        return -1
+    for i in l1:
+        if i!=mx1 and i>temp:
+            temp=i
+    return temp
+n=int(input())
+list1=[]
+for i in range(n):
+    list1.append(int(input()))
+if len(list1)==0:
+    maximum2=0
+    maximum1=0
+    print("Array is empty")
+else:
+    maximum1=max1(list1)
+    maximum2=max2(list1,maximum1)
+    print("Highest element is ",maximum1,)
+    if maximum2==-1:
+        print("Array contains only 1 element")
+    else:
+        print("\nSecond highest is ",maximum2)
